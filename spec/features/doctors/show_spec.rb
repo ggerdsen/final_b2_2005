@@ -28,7 +28,6 @@ RSpec.describe 'Doctors Show Page' do
     expect(page).to have_content(@rebecca_patient.name)
     
     click_on("Remove Patient", match: :first)
-    save_and_open_page
     expect(page).to_not have_content(@denny_patient.name)
     expect(page).to have_content(@rebecca_patient.name)
 
