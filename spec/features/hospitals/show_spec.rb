@@ -15,7 +15,7 @@ RSpec.describe 'Hospital Show Page' do
     
     expect(page).to have_content("Hospital Name: #{@sloan_hostpital.name}")
     expect(page).to have_content("Number of Doctors: 2")
-    expect(page).to have_content("Doctor Universities: #{@grey_doctor.education}")
+    expect(page).to have_content(@grey_doctor.education)
     expect(page).to have_content(@karev_doctor.education)
   end
   
