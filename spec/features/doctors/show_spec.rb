@@ -28,6 +28,9 @@ RSpec.describe 'Doctors Show Page' do
     expect(page).to have_content(@rebecca_patient.name)
     
     click_on("Remove Patient", match: :first)
+    
+    expect(current_path).to eq("/doctors/#{@grey_doctor.id}")
+    
     expect(page).to_not have_content(@denny_patient.name)
     expect(page).to have_content(@rebecca_patient.name)
 
